@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}ЛР №4{% endblock %}
+
+{% block content %}
+
+    <center><h1>Список игр</h1></center><hr><br>
+
+    {% if a_list %}
+        {% for a in a_list %}
+            <a href="{% url 'master:detail' a.id %}">{{ a.game_name }}</a><br>
+        {% endfor %}
+    {% else %}
+        Список пуст
+    {% endif %}
+
+{% endblock %}

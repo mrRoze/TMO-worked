@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ game.game_name}}{% endblock %}
+
+{% block content %}
+
+    <center><h1>{{ game.game_name }}</h1></center><hr><br>
+{#    Жанр игры: {{ game.game_type }}<br>#}
+{#    Наименование игры: {{ game.game_name }}<br>#}
+{#    <br>#}
+{#    Постер<br>#}
+{#    <img src="{{ game.game_photo }}" alt="Постер не найден">#}
+    <table border="1" cellpadding="5">
+    <tr>
+        <th>Жанр игры</th>
+        <th>{{ game.game_type }}</th>
+    </tr>
+    <tr>
+        <th>Наименование игры</th>
+        <th>{{ game.game_name }}</th>
+    </tr>
+    <tr>
+        <th>Постер</th>
+        <th><img src="{{ game.game_photo }}" alt="Постер не найден"></th>
+    </tr>
+    </table>
+    <br><hr><br>
+    <a href="/master">Назад</a>
+
+{% endblock %}
